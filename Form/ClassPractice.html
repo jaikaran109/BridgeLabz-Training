@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student submission form</title>
+</head>
+<body>
+    <form > <!--action used to send data to server and method  = post or get-->
+      <label for="name">Name</label><br>
+        <input  id="name" type="text" name="name" placeholder="Enter your name"><br>
+      <label for="email">Email</label><br>
+        <input id="email" type="email" name="email" placeholder="Enter your email"><br>
+      <label for="password">Password</label><br>
+        <input id="password" type="password" name="password" placeholder="Enter your password"><br>
+      <label for="phone">Phone</label><br>
+        <input id="phone"  type="tel" name="phone" placeholder="Enter your phone number"><br>
+      <label for="dob">Date of Birth</label><br>
+        <input id="dob" type="date" name="dob"><br>
+
+        <label for="course">Course</label><br> <!--select tag is used to create dropdown list-->
+        <select id="course" name="course">
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select><br>
+        <section>
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female  " name="gender" value="female">
+            <label for="female  ">Female</label><br>
+        </section>
+      <label for="message">Message</label><br>
+        <textarea id="message" name="message" placeholder="Enter your message"></textarea><br>
+        <br>
+
+      <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>
