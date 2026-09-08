@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Dashboard Grid */
+.dashboard {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 80px 1fr;
+
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    grid-column: 1 / -1;
+
+    background-color: #222;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Sidebar */
+aside {
+    background-color: white;
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+aside a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Content */
+main {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-gap: 20px;
+}
+
+/* Dashboard Boxes */
+.box {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    padding: 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+/* One box spans two columns */
+.box4 {
+    grid-column: span 2;
+}
+
+/* Hover Effect */
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 700px) {
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    header {
+        grid-column: 1;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .box4 {
+        grid-column: span 1;
+    }
+}
