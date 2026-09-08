@@ -1,0 +1,125 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Flexbox keeps the footer at the bottom */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #1f2937;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fixed header stays at the top while scrolling */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    height: 70px;
+    padding: 0 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #172554;
+    color: white;
+
+    z-index: 1000;
+}
+
+.header h1 {
+    font-size: 1.5rem; /* rem */
+}
+
+nav a {
+    margin-left: 20px; /* px */
+    color: white;
+    text-decoration: none;
+    font-size: 1em; /* em */
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content starts below the fixed header */
+main {
+    flex: 1;
+    padding-top: 70px;
+}
+
+/* Hero section */
+.hero {
+    min-height: 70vh; /* vh */
+    padding: 8% 10%; /* % */
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    width: 55%; /* % */
+}
+
+.hero h2 {
+    font-size: 2.5rem; /* rem */
+    margin-bottom: 1em; /* em */
+    color: #172554;
+}
+
+.hero p {
+    font-size: 18px; /* px */
+    line-height: 1.6;
+}
+
+/* Profile image */
+.profile img {
+    width: 220px; /* px */
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #172554;
+}
+
+/* About and Contact sections */
+.about,
+.contact {
+    padding: 60px 10%; /* px and % */
+    text-align: center;
+}
+
+.about {
+    background-color: #dbeafe;
+}
+
+.contact {
+    background-color: #e0f2fe;
+}
+
+.about h2,
+.contact h2 {
+    margin-bottom: 1em; /* em */
+    font-size: 2rem; /* rem */
+}
+
+/* Footer */
+.footer {
+    padding: 20px; /* px */
+    text-align: center;
+    background-color: #172554;
+    color: white;
+    font-size: 0.9rem; /* rem */
+}
