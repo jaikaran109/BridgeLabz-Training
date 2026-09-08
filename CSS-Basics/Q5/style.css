@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Main section */
+main {
+    min-height: 100vh;
+    padding: 60px 8%;
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 45px;
+}
+
+/*
+   Flexbox creates three equal columns.
+   align-items: stretch makes all cards
+   take the same height.
+*/
+.pricing-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual pricing card */
+.plan {
+    flex: 1;
+    min-height: 450px;
+
+    padding: 35px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+
+    text-align: center;
+
+    /*
+       Transition makes hover animation smooth.
+    */
+    transition: transform 0.3s ease,
+                background-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.plan:hover {
+    transform: scale(1.04);
+    background-color: #eff6ff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan heading */
+.plan h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+/* Price section */
+.price {
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.price span {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Feature list */
+.plan ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.plan li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+/*
+   margin-top: auto pushes the button
+   to the bottom of every card.
+*/
+.btn {
+    margin-top: auto;
+
+    display: block;
+    padding: 12px 20px;
+
+    background-color: #2563eb;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-weight: bold;
+}
+
+/* Button hover */
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+/*
+   Highlight the Standard plan as
+   the most popular plan.
+*/
+.popular {
+    border: 3px solid #2563eb;
+    background-color: #dbeafe;
+}
+
+/* Popular badge */
+.badge {
+    margin-bottom: 15px;
+    padding: 6px;
+
+    background-color: #2563eb;
+    color: white;
+
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    .pricing-container {
+        flex-direction: column;
+    }
+
+    .plan {
+        width: 100%;
+    }
+}Q5/
