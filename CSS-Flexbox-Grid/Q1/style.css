@@ -1,0 +1,148 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Header */
+.header {
+    display: flex;
+
+    /* Align name to left and navigation to right */
+    justify-content: space-between;
+
+    /* Center items vertically */
+    align-items: center;
+
+    padding: 20px 8%;
+    background-color: #172554;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2rem;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main area */
+.main-content {
+    flex: 1;
+
+    display: flex;
+
+    /* About and image appear side-by-side */
+    justify-content: center;
+
+    /* Center items vertically */
+    align-items: center;
+
+    gap: 60px;
+    padding: 60px 8%;
+}
+
+/* About section */
+.about {
+    flex: 1;
+    max-width: 550px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Image section */
+.image-section {
+    flex: 1;
+
+    display: flex;
+
+    /* Center image horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img {
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #2563eb;
+}
+
+/* Footer */
+footer {
+    display: flex;
+
+    /* Center horizontally */
+    justify-content: center;
+
+    /* Center vertically */
+    align-items: center;
+
+    padding: 20px;
+    background-color: #172554;
+    color: white;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+
+    /* Header items stack vertically */
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* Main sections stack vertically */
+    .main-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about {
+        max-width: 100%;
+    }
+
+    /* Navigation also becomes vertical */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
