@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Main container */
+main {
+    min-height: 100vh;
+    padding: 60px 8%;
+}
+
+/* Main heading */
+main > h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* Flexbox aligns all cards in one row */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Common card styling */
+.card {
+    /*
+       Box Model:
+       padding = space inside the card
+       margin = space outside the card
+    */
+    width: 32%;
+    padding: 30px;
+    margin: 10px;
+
+    background-color: white;
+
+    border: 2px solid #cbd5e1;
+    border-radius: 15px;
+
+    /* Shadow gives depth to the cards */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+/* Card heading */
+.card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+/* Role */
+.card h3 {
+    color: #2563eb;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Description */
+.card p {
+    line-height: 1.6;
+}
+
+/* Highlighted Team Lead card */
+.team-lead {
+    background-color: #dbeafe;
+    border: 3px dashed #2563eb;
+}
+
+/* Responsive layout for screens smaller than 600px */
+@media (max-width: 600px) {
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 40px 5%;
+    }
+
+    main > h1 {
+        font-size: 2rem;
+    }
+}
