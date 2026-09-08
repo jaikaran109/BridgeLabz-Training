@@ -1,0 +1,95 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page styling */
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: #f4f6f8;
+    color: #1f2937;
+    line-height: 1.8;
+}
+
+/* Header containing article title */
+header {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+/* Author and publication date */
+.subheading {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #dbeafe;
+}
+
+/* Main article container */
+main {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 25px;
+}
+
+/* Article paragraphs */
+article p {
+    font-size: 1.1rem;
+
+    /* Consistent spacing between paragraphs */
+    margin-bottom: 25px;
+}
+
+/* Style the first letter of every paragraph */
+article p::first-letter {
+    font-size: 3.2rem;
+    font-weight: bold;
+    float: left;
+    line-height: 0.9;
+    margin-right: 6px;
+}
+
+/* Make the first line of every paragraph bold */
+article p::first-line {
+    font-weight: bold;
+}
+
+/* Highlight important words */
+mark {
+    background-color: #fde68a;
+    color: #111827;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Blockquote styling */
+blockquote {
+    margin: 35px 0;
+    padding: 20px 25px;
+
+    background-color: #e0e7ff;
+
+    /* Left border emphasizes the quote */
+    border-left: 6px solid #3730a3;
+
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #312e81;
+}
+
+/* Footer */
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
