@@ -1,0 +1,127 @@
+/* Global Reset and Flexbox Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.demo-section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   1. ATTRIBUTE SELECTORS
+   ========================================== */
+
+/* Styles input elements that have exactly type="text" */
+input[type="text"] {
+    border: 2px solid #cbd5e1;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+/* Styles anchor tags where the href attribute starts with "https" */
+a[href^="https"] {
+    color: #0d9488;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a[href^="https"]::after {
+    content: " 🔒";
+    font-size: 0.8rem;
+}
+
+
+/* ==========================================
+   2. PSEUDO-CLASSES & PSEUDO-ELEMENTS
+   ========================================== */
+
+/* Pseudo-class: :focus applied when input is active */
+input[type="text"]:focus {
+    border-color: #0d9488;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.15);
+}
+
+/* Pseudo-class: :hover applied when hovering over list items */
+.list-item:hover {
+    background-color: #f8fafc;
+    color: #0f172a;
+    padding-left: 10px;
+}
+
+/* Pseudo-class: :nth-child() to style odd and even list rows differently */
+.list-item:nth-child(odd) {
+    background-color: #f1f5f9;
+}
+
+.list-item:nth-child(even) {
+    background-color: #ffffff;
+}
+
+/* Pseudo-element: ::before adds decorative content before headings */
+.demo-section h2::before {
+    content: "📌 ";
+}
+
+
+/* ==========================================
+   3. COMBINATORS (Descendant, Child, Adjacent, General Sibling)
+   ========================================== */
+
+/* Descendant Combinator (space): targets any <p> inside .combinator-container */
+.combinator-container p {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+/* Child Combinator (>): targets direct children <li> of .item-list */
+.item-list > li {
+    padding: 12px 15px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+/* Adjacent Sibling Combinator (+): targets the <p> immediately following an <h3> */
+h3 + p {
+    font-weight: 600;
+    color: #0d9488;
+}
+
+/* General Sibling Combinator (~): targets all <p> elements that follow an <h3> */
+h3 ~ p {
+    border-left: 3px solid #cbd5e1;
+    padding-left: 8px;
+}
