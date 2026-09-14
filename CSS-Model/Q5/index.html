@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors Demonstration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>Advanced CSS Selectors Showcase</h1>
+        <p>Demonstrating attribute selectors, pseudo-classes, pseudo-elements, and combinators.</p>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- Section 1: Attribute Selectors & Form Elements -->
+        <section class="demo-section">
+            <h2>1. Attribute Selectors</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Text Input (Styled via [type="text"]):</label>
+                    <input type="text" id="name" placeholder="Enter your name...">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Input (Different type):</label>
+                    <input type="email" id="email" placeholder="Enter your email...">
+                </div>
+            </form>
+            <div class="links-container">
+                <p>External Secure Link: <a href="https://example.com" target="_blank">Secure Site (https)</a></p>
+                <p>Internal/Local Link: <a href="/internal">Local Page</a></p>
+            </div>
+        </section>
+
+        <!-- Section 2: Pseudo-classes, Pseudo-elements & Combinators -->
+        <section class="demo-section combinator-container">
+            <h2>2. Combinators and List Items</h2>
+            <p>This paragraph is a direct descendant of the section container.</p>
+            
+            <ul class="item-list">
+                <li class="list-item">List Item 1 (Odd child)</li>
+                <li class="list-item special">List Item 2 (Even child with special class)</li>
+                <li class="list-item">List Item 3 (Odd child)</li>
+                <li class="list-item">List Item 4 (Even child)</li>
+            </ul>
+
+            <div class="sibling-block">
+                <h3>Heading Element</h3>
+                <p>Adjacent sibling paragraph (matches h3 + p).</p>
+                <p>General sibling paragraph (matches h3 ~ p).</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2026 Web Development Lab. All rights reserved.</p>
+    </footer>
+</body>
+</html>
