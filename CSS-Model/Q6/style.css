@@ -1,0 +1,100 @@
+?/* Global Reset and Flexbox Layout Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+header p {
+    margin: 5px 0 0 0;
+    color: #94a3b8;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Flexbox container for horizontal alignment of transformation items */
+.transform-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+}
+
+/* Wrapper to keep each box aligned vertically with its label */
+.transform-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Base Box Styling */
+.box {
+    width: 140px;
+    height: 140px;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: #ffffff;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    /* Required transition rule for smooth hover animation */
+    transition: all 0.4s ease;
+}
+
+/* Label Styling */
+.label {
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #475569;
+    background-color: #e2e8f0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+/* Rotation Transformation on Hover */
+.rotate-box:hover {
+    transform: rotate(45deg);
+    background: linear-gradient(135deg, #10b981, #047857);
+}
+
+/* Scale Transformation on Hover */
+.scale-box:hover {
+    transform: scale(1.2);
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+/* Translate Transformation on Hover */
+.translate-box:hover {
+    transform: translate(0, -15px);
+    background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+}
+
+/* Skew Transformation on Hover */
+.skew-box:hover {
+    transform: skew(15deg, 10deg);
+    background: linear-gradient(135deg, #ec4899, #be185d);
+}
