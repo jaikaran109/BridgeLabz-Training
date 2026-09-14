@@ -1,0 +1,87 @@
+/* Global Reset and Flexbox Body Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Footer Design */
+header, footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2rem;
+}
+
+/* Main Layout Wrapper */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Flexbox container to center all boxes horizontally and vertically */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Base Box Styles */
+.box {
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: #ffffff;
+}
+
+/* Box 1: Utilizing percentage width, max-width, and hidden overflow */
+.box-one {
+    background-color: #2563eb;
+    width: 80%;
+    max-width: 280px;
+    height: 220px;
+    overflow: hidden;
+}
+
+/* Box 2: Utilizing vh units, min-height constraint, and scroll behavior */
+.box-two {
+    background-color: #16a34a;
+    width: 260px;
+    min-height: 200px;
+    height: 25vh;
+    overflow: scroll;
+}
+
+/* Box 3: Utilizing pixel units and auto overflow control */
+.box-three {
+    background-color: #dc2626;
+    width: 270px;
+    height: 190px;
+    overflow: auto;
+}
+
+/* Typography Rules for Boxes */
+.box h2 {
+    font-size: 1.1rem;
+    margin-top: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
+}
+
+.box p {
+    font-size: 0.95em;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
