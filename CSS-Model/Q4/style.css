@@ -1,0 +1,106 @@
+/* Global Reset and Typography Setup */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #334155;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Footer Design */
+header, footer {
+    background-color: #1e293b;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+header h1 {
+    margin: 0 0 5px 0;
+    /* Adding text-shadow for visual depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+header p {
+    margin: 0;
+    color: #94a3b8;
+}
+
+/* Main Layout Wrapper */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Flexbox container arranging cards in a single row */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+}
+
+/* Base Card Styles and Smooth Transitions */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    width: 280px;
+    box-sizing: border-box;
+    /* Smooth transition for elevation and shadow changes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Heading Text-Shadow for Depth */
+.card h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    color: #0f172a;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #64748b;
+    margin-bottom: 0;
+}
+
+/* Card 1: Soft Diffused Shadow & Hover Lift */
+.card-one {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card-one:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Card 2: Sharp Offset Shadow & Hover Lift */
+.card-two {
+    box-shadow: 6px 6px 0px 0px #334155;
+    border: 2px solid #334155;
+}
+
+.card-two:hover {
+    transform: translateY(-8px);
+    box-shadow: 10px 12px 0px 0px #1e293b;
+}
+
+/* Card 3: Colored Glow Shadow & Hover Lift */
+.card-three {
+    box-shadow: 0 8px 20px -4px rgba(59, 130, 246, 0.3);
+}
+
+.card-three:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px -4px rgba(59, 130, 246, 0.5);
+}
