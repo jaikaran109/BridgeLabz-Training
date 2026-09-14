@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Height and Width Practice Layout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Page Header -->
+    <header>
+        <h1>Height and Width Practice Layout</h1>
+        <p>Demonstrating CSS dimensions, sizing units, constraints, and overflow handling.</p>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main>
+        <section class="flex-container">
+            <!-- Box 1: Using %, max-width, and hidden overflow -->
+            <div class="box box-one">
+                <h2>Box 1 (Width %, Max-Width)</h2>
+                <p>This box uses a percentage-based width with a strict max-width constraint. Excess content is clipped using the overflow property to preserve the layout structure.</p>
+            </div>
+
+            <!-- Box 2: Using vh, min-height, and scroll overflow -->
+            <div class="box box-two">
+                <h2>Box 2 (Height vh, Min-Height)</h2>
+                <p>This box uses viewport height (vh) units alongside em-based padding, featuring a min-height rule to ensure it never scales below a threshold. Scrollbars appear if content overflows.</p>
+            </div>
+
+            <!-- Box 3: Using fixed px, em units, and auto overflow -->
+            <div class="box box-three">
+                <h2>Box 3 (Fixed px, Overflow Auto)</h2>
+                <p>Configured with fixed pixel dimensions and em spacing. Includes auto overflow behavior to seamlessly display scroll controls when text exceeds the container height limits.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Page Footer -->
+    <footer>
+        <p>&copy; 2026 Web Development Lab. All rights reserved.</p>
+    </footer>
+</body>
+</html>
