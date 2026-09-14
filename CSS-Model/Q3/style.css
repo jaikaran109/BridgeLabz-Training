@@ -1,0 +1,113 @@
+/* Global Reset and Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    /* Account for fixed header and footer height */
+    padding-top: 70px;
+    padding-bottom: 60px;
+    background-color: #0f172a;
+}
+
+/* Fixed Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* Fixed Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #94a3b8;
+}
+
+/* Base Layout for Gradient Sections */
+.gradient-section {
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* Section 1: Linear Gradient with Parallax Effect */
+.linear-section {
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6, #9333ea);
+    /* Creates the parallax-like fixed background effect */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Section 2: Radial Gradient */
+.radial-section {
+    background: radial-gradient(circle at center, #4f46e5, #1e1b4b, #09090b);
+}
+
+/* Glassmorphism Content Box for Readability */
+.content-box {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.content-box h2 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #f8fafc;
+}
+
+.content-box p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.content-box code {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #38bdf8;
+}
