@@ -1,0 +1,26 @@
+/* Profile image styling */
+.profile-image {
+width: 180px;
+height: 180px;
+object-fit: cover;
+border: 5px solid white;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth button transition */
+.btn {
+transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+.btn:hover {
+transform: translateY(-2px);
+}
+
+/* Responsive profile image */
+@media (max-width: 576px) {
+.profile-image {
+width: 140px;
+height: 140px;
+}
+}

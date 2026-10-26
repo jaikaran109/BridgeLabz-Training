@@ -1,0 +1,23 @@
+/* Product image height */
+.product-card img {
+height: 220px;
+object-fit: cover;
+}
+
+/* Smooth hover transition */
+.product-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card hover effect */
+.product-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Responsive image height */
+@media (max-width: 576px) {
+.product-card img {
+height: 250px;
+}
+}

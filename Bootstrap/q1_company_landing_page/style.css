@@ -1,0 +1,36 @@
+* Custom styling for the hero section */
+.hero-section {
+background: linear-gradient(135deg, #f8f9fa, #e9f2ff);
+padding: 60px 0;
+}
+
+/* Custom minimum height for hero */
+.min-vh-75 {
+min-height: 75vh;
+}
+
+/* Service card styling */
+.service-box {
+background-color: #ffffff;
+border-radius: 12px;
+height: 100%;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.service-box:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Responsive heading */
+@media (max-width: 576px) {
+.hero-section h1 {
+font-size: 2.3rem;
+}
+
+.hero-section {
+    padding: 40px 0;
+}
+
+}

@@ -1,0 +1,26 @@
+/* Pricing card styling */
+.pricing-card {
+border: none;
+border-radius: 15px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect using CSS transition */
+.pricing-card:hover {
+transform: translateY(-8px);
+box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Keep feature list readable on the highlighted Pro card */
+.bg-primary .list-group-item {
+background-color: transparent;
+color: white;
+border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive spacing */
+@media (max-width: 767px) {
+.pricing-card {
+margin-bottom: 10px;
+}
+}
