@@ -1,0 +1,67 @@
+p {
+    font-size: 17px;
+}
+
+.highlight {
+    color: blue;
+    background-color: #e0f0ff;
+    padding: 5px;
+}
+
+#special {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+a[target="_blank"] {
+    color: green;
+    font-weight: bold;
+}
+
+.parent p {
+    background-color: #fff3cd;
+    padding: 8px;
+}
+
+.parent > p {
+    border-left: 5px solid orange;
+}
+
+.first + p {
+    color: purple;
+    font-weight: bold;
+}
+
+.first ~ p {
+    margin-left: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px #cccccc;
+}
+
+.footer-text {
+    text-align: center;
+    padding: 20px;
+}
