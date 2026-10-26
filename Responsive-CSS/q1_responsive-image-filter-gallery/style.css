@@ -1,0 +1,110 @@
+
+* {
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: white;
+}
+
+/* Gallery using CSS Grid */
+.gallery {
+    display: grid;
+
+    /* Responsive Grid as required */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 25px;
+    padding: 40px;
+}
+
+/* Each figure contains image and caption */
+figure {
+    margin: 0;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Common image styling */
+img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+
+    /* Smooth filter transition */
+    transition: filter 0.4s ease;
+}
+
+/* Different CSS filters */
+
+/* Blur effect */
+.blur {
+    filter: blur(4px);
+}
+
+/* Black and white effect */
+.grayscale {
+    filter: grayscale(100%);
+}
+
+/* Old photograph effect */
+.sepia {
+    filter: sepia(100%);
+}
+
+/* Makes image brighter */
+.brightness {
+    filter: brightness(150%);
+}
+
+/* Increases contrast */
+.contrast {
+    filter: contrast(180%);
+}
+
+/* Changes image colors */
+.hue {
+    filter: hue-rotate(120deg);
+}
+
+/* Remove filter when mouse is over image */
+img:hover {
+    filter: none;
+}
+
+/* Caption styling */
+figcaption {
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+}
+
+/* Below 600px, display images in one column */
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
