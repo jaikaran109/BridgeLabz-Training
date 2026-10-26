@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Q1_ProductManager/script1.js" defer></script>
+    <script src="Q2_StudentFormValidator/script2.js" defer></script>
+    <script src="Q3_LibraryManagement/script3.js" defer></script>
+    <script src="Q4_CustomFormBuilder/script4.js" defer></script>
+    <script src="Q5_MovieTicketBooking/script5.js" defer></script>
+    <script src="Q6_EmployeeManagement/script6.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <div class="page-header__content">
+            <p class="eyebrow">JavaScript practice</p>
+            <h1>Assignment 4</h1>
+            <p>Classes, objects, forms, and regular expressions in six interactive exercises.</p>
+        </div>
+    </header>
+
+    <nav class="assignment-nav" aria-label="Assignment questions">
+        <a href="#q1">Q1 Products</a>
+        <a href="#q2">Q2 Student form</a>
+        <a href="#q3">Q3 Library</a>
+        <a href="#q4">Q4 Form builder</a>
+        <a href="#q5">Q5 Movie tickets</a>
+        <a href="#q6">Q6 Employees</a>
+    </nav>
+
+    <main class="assignment-list">
+        <section class="panel" id="q1">
+            <div class="panel__heading">
+                <p class="eyebrow">Classes + objects</p>
+                <h2>Q1: E-Commerce Product Manager</h2>
+                <p>Create products, apply a discount, and filter products priced above 1000.</p>
+            </div>
+            <form id="product-form" class="form-grid">
+                <label>Product ID<input name="id" required></label>
+                <label>Product name<input name="name" required></label>
+                <label>Price<input name="price" type="number" min="0.01" step="0.01" required></label>
+                <label>Stock<input name="stock" type="number" min="0" step="1" required></label>
+                <label>Category<input name="category" required></label>
+                <button type="submit">Add product</button>
+            </form>
+            <div class="control-row">
+                <label for="discount-product">Discount product</label>
+                <select id="discount-product"></select>
+                <label for="discount-percent">Discount (%)</label>
+                <input id="discount-percent" type="number" min="0" max="100" step="1" value="10">
+                <button id="apply-discount" type="button">Apply discount</button>
+                <button id="filter-products" class="button-secondary" type="button">Show price &gt; 1000</button>
+                <button id="show-all-products" class="button-secondary" type="button">Show all</button>
+            </div>
+            <p id="product-message" class="message" aria-live="polite"></p>
+            <div id="product-list" class="card-grid"></div>
+            <h3>Products priced above 1000</h3>
+            <ul id="filtered-products" class="simple-list"></ul>
+        </section>
+
+        <section class="panel" id="q2">
+            <div class="panel__heading">
+                <p class="eyebrow">Forms + RegExp</p>
+                <h2>Q2: Student Form Validator</h2>
+                <p>All fields are validated with JavaScript and regular expressions.</p>
+            </div>
+            <form id="student-form" novalidate class="form-grid form-grid--narrow">
+                <label for="student-name">Name</label>
+                <input id="student-name" name="name" autocomplete="name" aria-describedby="student-name-error" required>
+                <span id="student-name-error" class="field-error"></span>
+
+                <label for="student-email">Email</label>
+                <input id="student-email" name="email" type="email" autocomplete="email" aria-describedby="student-email-error" required>
+                <span id="student-email-error" class="field-error"></span>
+
+                <label for="student-phone">Phone</label>
+                <input id="student-phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" aria-describedby="student-phone-error" required>
+                <span id="student-phone-error" class="field-error"></span>
+
+                <label for="student-password">Password</label>
+                <input id="student-password" name="password" type="password" autocomplete="new-password" aria-describedby="student-password-error" required>
+                <span id="student-password-error" class="field-error"></span>
+
+                <button type="submit">Validate registration</button>
+            </form>
+            <p id="student-message" class="message" aria-live="polite"></p>
+        </section>
+
+        <section class="panel" id="q3">
+            <div class="panel__heading">
+                <p class="eyebrow">Classes + objects</p>
+                <h2>Q3: Library Management System</h2>
+                <p>Issue or return a book by ISBN and browse the library collection.</p>
+            </div>
+            <form id="library-form" class="control-row">
+                <label for="library-isbn">ISBN</label>
+                <input id="library-isbn" name="isbn" required>
+                <label for="library-action">Action</label>
+                <select id="library-action" name="action">
+                    <option value="issue">Issue book</option>
+                    <option value="return">Return book</option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="library-message" class="message" aria-live="polite"></p>
+            <div id="book-list" class="card-grid"></div>
+        </section>
+
+        <section class="panel" id="q4">
+            <div class="panel__heading">
+                <p class="eyebrow">Forms + classes</p>
+                <h2>Q4: Custom Form Builder</h2>
+                <p>A FormBuilder creates a form from field definitions and returns submitted values as an object.</p>
+            </div>
+            <div id="dynamic-form-container"></div>
+            <p id="builder-message" class="message" aria-live="polite"></p>
+            <pre id="builder-result" class="result-box" hidden></pre>
+        </section>
+
+        <section class="panel" id="q5">
+            <div class="panel__heading">
+                <p class="eyebrow">Objects + RegExp</p>
+                <h2>Q5: Movie Ticket Booking</h2>
+                <p>Enter a valid name, email, and a seat count from 1 to 10.</p>
+            </div>
+            <form id="booking-form" novalidate class="form-grid form-grid--narrow">
+                <label for="booking-name">Name</label>
+                <input id="booking-name" name="name" autocomplete="name" aria-describedby="booking-name-error" required>
+                <span id="booking-name-error" class="field-error"></span>
+
+                <label for="booking-email">Email</label>
+                <input id="booking-email" name="email" type="email" autocomplete="email" aria-describedby="booking-email-error" required>
+                <span id="booking-email-error" class="field-error"></span>
+
+                <label for="booking-seats">Seats (1-10)</label>
+                <input id="booking-seats" name="seats" type="number" min="1" max="10" step="1" aria-describedby="booking-seats-error" required>
+                <span id="booking-seats-error" class="field-error"></span>
+
+                <button type="submit">Book tickets</button>
+            </form>
+            <p id="booking-message" class="message" aria-live="polite"></p>
+            <div id="booking-ticket" class="result-box" hidden></div>
+        </section>
+
+        <section class="panel" id="q6">
+            <div class="panel__heading">
+                <p class="eyebrow">Classes + object methods</p>
+                <h2>Q6: Employee Management System</h2>
+                <p>Calculate annual salaries for five employees and the company payout with reduce().</p>
+            </div>
+            <form id="bonus-form" class="control-row">
+                <label for="bonus-percent">Bonus (%)</label>
+                <input id="bonus-percent" type="number" min="0" max="100" step="0.1" value="10" required>
+                <button type="submit">Apply bonus to all</button>
+            </form>
+            <p id="employee-message" class="message" aria-live="polite"></p>
+            <div id="employee-list" class="table-wrap"></div>
+            <p id="annual-payout" class="summary-total"></p>
+        </section>
+    </main>
+
+    <footer class="page-footer">JavaScript Assignment 4</footer>
+</body>
+</html>
