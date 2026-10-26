@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="Q1_CallbackGreeting/script1.js" defer></script>
+    <script src="Q2_CallbackOperations/script2.js" defer></script>
+    <script src="Q3_ArrowFunctionThis/script3.js" defer></script>
+    <script src="Q4_CarPrototype/script4.js" defer></script>
+    <script src="Q5_PersonStudentInheritance/script5.js" defer></script>
+    <script src="Q6_PrototypeChain/script6.js" defer></script>
+    <script src="Q7_ClosureMultiplier/script7.js" defer></script>
+    <script src="Q8_CustomArrayMap/script8.js" defer></script>
+    <script src="Q9_ClassInheritance/script9.js" defer></script>
+</head>
+<body>
+    <header class="page-header">
+        <div class="page-header__content">
+            <p class="eyebrow">JavaScript practice</p>
+            <h1>Assignment 5</h1>
+            <p>Callbacks, object methods, prototypes, closures, and ES6 classes.</p>
+        </div>
+    </header>
+
+    <nav class="assignment-nav" aria-label="Assignment questions">
+        <a href="#q1">Q1 Callbacks</a>
+        <a href="#q2">Q2 Operations</a>
+        <a href="#q3">Q3 this</a>
+        <a href="#q4">Q4 Car prototype</a>
+        <a href="#q5">Q5 Inheritance</a>
+        <a href="#q6">Q6 Prototype chain</a>
+        <a href="#q7">Q7 Closures</a>
+        <a href="#q8">Q8 myMap</a>
+        <a href="#q9">Q9 ES6 classes</a>
+    </nav>
+
+    <main class="assignment-list">
+        <section class="panel" id="q1">
+            <div class="panel__heading">
+                <p class="eyebrow">Callbacks</p>
+                <h2>Q1: Greeting with a callback</h2>
+                <p><code>greetUser</code> prints a greeting, then calls <code>showEndMessage</code>.</p>
+            </div>
+            <form id="greeting-form" class="control-row">
+                <label for="greeting-name">Name</label>
+                <input id="greeting-name" value="Aarav" required>
+                <button type="submit">Greet user</button>
+            </form>
+            <pre id="greeting-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q2">
+            <div class="panel__heading">
+                <p class="eyebrow">Higher-order functions</p>
+                <h2>Q2: Apply an operation</h2>
+                <p>Pass a callback to <code>applyOperation(numbers, operation)</code>.</p>
+            </div>
+            <p class="example-data">Input array: <code>[1, 2, 3, 4]</code></p>
+            <div class="control-row">
+                <button id="double-numbers" type="button">Double each number</button>
+                <button id="square-numbers" type="button">Square each number</button>
+            </div>
+            <pre id="operation-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q3">
+            <div class="panel__heading">
+                <p class="eyebrow">Arrow functions + this</p>
+                <h2>Q3: Fix the object method</h2>
+                <p>The arrow method captures the surrounding <code>this</code>, so the name is unavailable. Replacing it with a normal method binds <code>this</code> to the user object.</p>
+            </div>
+            <div class="control-row">
+                <button id="show-arrow-name" type="button">Run arrow method</button>
+                <button id="fix-user-method" type="button">Fix with a normal method</button>
+            </div>
+            <pre id="this-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q4">
+            <div class="panel__heading">
+                <p class="eyebrow">Constructor + prototype</p>
+                <h2>Q4: Car details</h2>
+                <p><code>getDetails()</code> is shared by both car objects through <code>Car.prototype</code>.</p>
+            </div>
+            <button id="show-cars" type="button">Show cars</button>
+            <pre id="car-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q5">
+            <div class="panel__heading">
+                <p class="eyebrow">Constructor inheritance</p>
+                <h2>Q5: Person and Student</h2>
+                <p><code>Student</code> inherits the person name and prototype methods, then adds a branch and its own method.</p>
+            </div>
+            <button id="show-student" type="button">Show student</button>
+            <pre id="student-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q6">
+            <div class="panel__heading">
+                <p class="eyebrow">Prototype chain</p>
+                <h2>Q6: Person → Faculty → Professor</h2>
+                <p>Each prototype contributes its own method; a Professor can call all three.</p>
+            </div>
+            <button id="show-professor" type="button">Show professor methods</button>
+            <pre id="professor-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q7">
+            <div class="panel__heading">
+                <p class="eyebrow">Closures</p>
+                <h2>Q7: Multiplier factory</h2>
+                <p><code>makeMultiplier(3)</code> returns a function that remembers the multiplier and multiplies its input by 3.</p>
+            </div>
+            <form id="multiplier-form" class="control-row">
+                <label for="multiplier-value">Number</label>
+                <input id="multiplier-value" type="number" value="5" step="any" required>
+                <button type="submit">Multiply by 3</button>
+            </form>
+            <pre id="multiplier-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q8">
+            <div class="panel__heading">
+                <p class="eyebrow">Array prototype</p>
+                <h2>Q8: Custom myMap()</h2>
+                <p>Add a custom <code>myMap()</code> method to arrays and use it to double each value.</p>
+            </div>
+            <button id="run-my-map" type="button">Run myMap example</button>
+            <pre id="my-map-output" class="result-box" aria-live="polite"></pre>
+        </section>
+
+        <section class="panel" id="q9">
+            <div class="panel__heading">
+                <p class="eyebrow">ES6 classes</p>
+                <h2>Q9: Person and Student with classes</h2>
+                <p>Compare the constructor/prototype version with an ES6 <code>extends</code> and <code>super()</code> implementation.</p>
+            </div>
+            <button id="compare-inheritance" type="button">Compare both versions</button>
+            <pre id="class-output" class="result-box" aria-live="polite"></pre>
+        </section>
+    </main>
+
+    <footer class="page-footer">JavaScript Assignment 5</footer>
+</body>
+</html>
