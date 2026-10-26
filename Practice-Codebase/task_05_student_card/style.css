@@ -1,0 +1,53 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 280px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px #cccccc;
+}
+
+.profile {
+    width: 100px;
+    height: 100px;
+    background-color: #dddddd;
+    border-radius: 50%;
+    margin: auto;
+    line-height: 100px;
+    color: #777777;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+h3 {
+    margin: 5px;
+}
+
+p {
+    color: #555555;
+    line-height: 1.5;
+}
+
+a {
+    color: #4285f4;
+    text-decoration: none;
+    margin: 3px;
+}
+
+button {
+    background-color: #2463e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

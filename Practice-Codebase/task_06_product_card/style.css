@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: white;
+}
+
+/* ---------- Card Wrapper ---------- */
+.product-card {
+    width: 320px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+/* ---------- Image Section ---------- */
+.image-container {
+    position: relative;
+    height: 260px;
+    background: radial-gradient(circle at center, #e8382a, #b31217);
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.heart {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 34px;
+    height: 34px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart i {
+    font-size: 18px;
+    color: black;
+}
+
+.discount {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: red;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* ---------- Details Section ---------- */
+.product-details {
+    padding: 24px;
+}
+
+.category {
+    display: inline-block;
+    background-color: #4776c8;
+    color: white;
+    padding: 3px 8px;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.product-details h2 {
+    display: inline-block;
+    width: fit-content;
+    background-color: #4776c8;
+    color: white;
+    font-size: 20px;
+    padding: 4px 8px;
+    margin: 0 0 12px 0;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.stars {
+    color: rgb(252, 187, 34);
+    font-size: 18px;
+}
+
+.stars i {
+    margin-right: 2px;
+}
+
+.reviews {
+    color: grey;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.current-price {
+    font-size: 26px;
+    font-weight: bold;
+    color: black;
+}
+
+.old-price {
+    font-size: 15px;
+    color: grey;
+    text-decoration: line-through;
+}
+
+/* ---------- Add to Cart Button ---------- */
+.cart-btn {
+    width: 100%;
+    padding: 16px 0;
+    background-color:black;
+    color:white;
+    border: none;
+    border-radius: 14px;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    display: block;
+    margin-top: 4px;
+}
+
+.cart-btn:hover {
+    background-color:black;
+}
+
+.cart-btn:active {
+    transform: scale(0.98);
+}
